@@ -44,3 +44,11 @@ The replacement keeps recognizable app-specific UI: Chrome on macOS, Google sear
 - Existing Gmail icon and Apple SF Symbols retained from the project's sourced assets.
 
 The desktop is an interactive illustration, not an embedded authenticated session. Clicking tabs pauses automatic progression; source results reveal the selected vendor evidence; spreadsheet cells show their value in the formula bar; activity expands into individual handoff records; email remains a draft for human review.
+
+
+## Dark surfaces and camera tours
+
+- [Google Search dark appearance](https://support.google.com/websearch/answer/2539428?hl=en): native light-on-dark search results; retain blue links and recognizable search controls.
+- [Gmail theme options](https://support.google.com/mail/answer/112508?co=GENIE.Platform%3DDesktop&hl=en): desktop themes exist, but a completely dark compose surface is not asserted as a native feature.
+- [Dark Reader](https://darkreader.org/): reference for browser-level dark treatment. The Sheets grid and Gmail compose are illustrative dark browser surfaces, not claims of native desktop dark-mode availability. Brand assets retain original colors. No extension is installed.
+- Feature tours now use full-device camera moves, 40-second duration, longer reading holds, chapter seeking and a scrubber. Original phone frame and SF Symbols remain sourced assets; no images or audio generated.

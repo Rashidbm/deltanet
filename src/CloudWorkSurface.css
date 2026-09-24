@@ -19,7 +19,7 @@
 .cloud-work-note { font-size: 9px; color: #747480; text-align: right; margin: 17px 0 0; }
 @media(max-width:760px){.cloud-work-section{padding:42px 24px 28px}.cloud-work-copy h2{font-size:28px}.cloud-work-intro{font-size:12px;margin:15px 0 20px}.cloud-work-update{min-height:130px}.cloud-work-note{font-size:8px}}
 @media(max-width:480px){.cloud-work-section{padding-inline:20px}.cloud-work-copy h2{font-size:31px}.cloud-work-update{min-height:128px}.cloud-work-update strong{font-size:13px}.cloud-work-update p{font-size:11px}}
-/* Chrome on macOS; app surfaces retain their native light UI inside our charcoal desktop. */
+/* Chrome on macOS; recognizable app controls inside a charcoal desktop. */
 .work-desktop{min-width:0;position:relative;border:1px solid #ffffff24;border-radius:14px;background:linear-gradient(135deg,#292a2e,#141519 60%,#33353a);box-shadow:inset 0 1px #ffffff0c,0 20px 70px #0003;padding:0 18px;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;container-type:inline-size}
 .work-mac-menu{height:27px;display:flex;align-items:center;gap:13px;color:#d7d7db;font-size:8px;margin:0 -18px 16px;padding:0 14px;background:#ffffff05;border-bottom:1px solid #ffffff05}.mac-apple{font-size:13px}.work-mac-menu b{font-weight:600}.mac-menu-time{margin-left:auto;font-variant-numeric:tabular-nums}
 .work-window{overflow:hidden;border-radius:8px;border:1px solid #7778;box-shadow:0 12px 30px #0008,0 1px 5px #000a;background:#fff}.work-tabs{height:33px;display:flex;align-items:center;padding:0 9px;gap:8px;background:#27282b;color:#bfc0c4}.work-traffic{display:flex;gap:5px;margin-right:6px;flex:none}.work-traffic i{height:7px;width:7px;border-radius:50%;background:#ff5f57;box-shadow:inset 0 0 0 .5px #0002}.work-traffic i:nth-child(2){background:#febc2e}.work-traffic i:nth-child(3){background:#28c840}.work-tab-list{display:flex;align-self:stretch;align-items:stretch;flex:1;min-width:0;gap:3px;padding-top:6px}.work-tab-list button{display:flex;align-items:center;gap:6px;padding:0 9px;flex:1;min-width:0;border-radius:6px 6px 0 0;font-size:8px;white-space:nowrap;text-align:left;cursor:pointer;color:#a5a5ab}.work-tab-list button[aria-selected=true]{background:#393a3e;color:#eee}.work-tab-list button>svg:last-child{margin-left:auto;flex:none}.work-tab-list img{width:11px;height:11px;object-fit:contain}.work-tab-list button:hover{color:#fff}.work-tab-list button:focus-visible{outline:1px solid #aaa;outline-offset:-2px}.work-address{display:flex;align-items:center;gap:10px;height:29px;background:#393a3e;padding:0 10px;color:#aaa}.work-address>svg{width:10px;height:10px;flex:none}.work-address>span{display:flex;gap:8px;align-items:center;flex:1;height:21px;border-radius:12px;padding:0 9px;background:#242528;color:#c5c5c8;font-size:8px;white-space:nowrap;overflow:hidden}.work-address>span>svg{flex:none}.work-address>span>svg:last-child{margin-left:auto}
@@ -37,3 +37,56 @@
 .work-desktop img[src$="google-sheets.webp"]{object-fit:cover;object-position:left}
 .google-word{width:64px;height:23px;object-fit:contain;flex:none}
 @media(max-width:480px){.google-word{width:49px;height:20px}}
+
+/* Dark Google surfaces; Sheets and compose use a browser dark-theme treatment.
+   References and native-theme distinctions: docs/research/2026-09-24-dock-cloud-demo.md. */
+.work-window,.work-app-panel { background:#202124; color:#e8eaed; color-scheme:dark; }
+.work-search-input { background:#303134; border-color:#3c4043; color:#e8eaed; }
+.google-word { filter:brightness(0) invert(.9); }
+.work-search-filters { border-color:#3c4043; color:#bdc1c6; }
+.work-search-filters b { color:#e8eaed; border-color:#e8eaed; }
+.result-site { color:#dadce0; }
+.result-site>span:first-child { background:#303134; color:#bdc1c6; }
+.result-site small,.work-search-result>p { color:#bdc1c6; }
+.work-search-result>strong { color:#8ab4f8; }
+.work-source-popover { background:#292a2d; border-color:#5f6368; box-shadow:0 8px 24px #0006; }
+.work-source-popover>span,.work-source-popover small { color:#9aa0a6; }
+.work-source-popover p { color:#bdc1c6; }
+.sheets-heading,.sheets-bottom { background:#202124; }
+.sheets-heading strong,.sheets-heading nav,.sheets-heading strong svg { color:#dadce0; }
+.sheet-person { border-color:#3c4043; }
+.sheets-share { background:#004a77; color:#c2e7ff; }
+.sheets-toolbar { background:#303134; color:#dadce0; }
+.sheets-toolbar i { background:#5f6368; }
+.sheets-formula { color:#e8eaed; border-color:#5f6368; }
+.sheets-formula>span:first-child { border-color:#5f6368; }
+.sheets-formula i { color:#9aa0a6; }
+.sheets-grid { background:#202124; }
+.sheets-grid th,.sheets-grid td { border-color:#3c4043; }
+.sheets-grid th { background:#292a2d; color:#bdc1c6; }
+.sheets-grid thead th,.sheets-grid tbody th { border-color:#5f6368; }
+.sheets-column-labels td { background:#253a32; color:#d4e9dc; }
+.sheets-column-labels svg { color:#9bb5a6; }
+.sheets-grid td.selected-cell { outline-color:#8ab4f8; background:#26374a; }
+.sheets-grid td.selected-cell:after { background:#8ab4f8; border-color:#202124; }
+.sheets-grid td.status-cell>span { background:#284b39; color:#b9e8c9; }
+.sheets-bottom { border-color:#3c4043; }
+.sheets-bottom>span { background:#284b39; color:#b9e8c9; }
+.sheets-bottom small { color:#9aa0a6; }
+.work-gmail { background:#202124; }
+.work-gmail>header>strong,.work-gmail aside { color:#dadce0; }
+.work-gmail>header>span:not(.work-profile) { background:#303134; color:#bdc1c6; }
+.gmail-compose { background:#303134; color:#e8eaed; }
+.work-gmail aside>b { background:#413332; color:#f6aea9; }
+.gmail-inbox { background:#292a2d; color:#bdc1c6; }
+.gmail-inbox>div,.gmail-inbox p { border-color:#3c4043; }
+.gmail-inbox p { background:#292a2d; color:#9aa0a6; }
+.gmail-draft { background:#202124; color:#e8eaed; box-shadow:0 0 18px #0008; border:1px solid #5f6368; border-bottom:0; }
+.gmail-draft-title { background:#303134; }
+.gmail-draft-title>span,.gmail-recipient,.gmail-send-tools { color:#bdc1c6; }
+.gmail-recipient,.gmail-subject { border-color:#3c4043; }
+.gmail-recipient>span { color:#dadce0; background:#303134; border-color:#5f6368; }
+.gmail-caret { background:#e8eaed; }
+.gmail-attachment { background:#303134; color:#8ab4f8; }
+.gmail-attachment>span { color:#9aa0a6; }
+.gmail-send-label { background:#8ab4f8; color:#202124; }
