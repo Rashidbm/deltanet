@@ -12,7 +12,7 @@ import { CloudWorkSurface } from './CloudWorkSurface'
 
 const CONNECTION_TIMING = [3500, 4500, 4500] as const
 const LEARNING_TIMING = [5500, 5500, 6500] as const
-const CLOUD_TIMING = [4000, 4500, 5000] as const
+const CLOUD_TIMING = [8000, 8000, 9500] as const
 const fade = { duration: .25, ease: [.22, 1, .36, 1] as const }
 
 function AppMark({ app }: { app: string }) {
@@ -82,12 +82,12 @@ function LearningSection() {
 }
 
 const cloudUpdates = [
-  { time: '02:16', title: 'The release is being checked.', detail: 'Your agent opens GitHub and follows the team’s release-check skill.', label: 'Checking the release', icon: Moon },
-  { time: '02:18', title: 'Both payment checks passed.', detail: 'New cards and saved cards. The results become shared task context.', label: 'Reading the results', icon: Cloud },
-  { time: '08:00', title: 'The brief is ready when you are.', detail: 'Noura has the verified context. The customer update is ready for her review.', label: 'Preparing your brief', icon: Sun },
+  { time: '02:14', title: 'Research turns into a shortlist.', detail: 'Your agent checks the options, reads the sources, and compares them against your team’s requirements.', label: 'Research the options', icon: Moon },
+  { time: '02:17', title: 'The next agent has the context.', detail: 'The comparison, requirements, and source links reach Noura’s agent. No forwarding or re-explaining.', label: 'Share the comparison', icon: Cloud },
+  { time: '08:00', title: 'You wake up to a decision.', detail: 'The research is done and the email is drafted. Noura reviews the recommendation before anything goes out.', label: 'Review the draft', icon: Sun },
 ]
 function CloudSection() {
-  const { host, step, playing, reduced, choose, replay, toggle } = useSectionPlayback(CLOUD_TIMING, true)
+  const { host, step, playing, running, reduced, choose, replay, toggle, revision } = useSectionPlayback(CLOUD_TIMING, true)
   const update = cloudUpdates[step]
   const Icon = update.icon
   return <section id="cloud" className="cloud-work-section" aria-label="Cloud execution"><div className="section-boundary">
@@ -97,7 +97,7 @@ function CloudSection() {
         <div className="cloud-work-update"><div className="cloud-work-time"><Icon size={17} /><span>{update.time}</span><small>IN THE CLOUD</small></div><Swap identity={step}><strong>{update.title}</strong><p>{update.detail}</p></Swap></div>
         <div className="cloud-work-controls"><div role="group" aria-label="Cloud progress">{cloudUpdates.map((item,index) => <button key={item.time} aria-label={item.label} aria-pressed={index === step} onClick={() => choose(index)} disabled={reduced}><span /></button>)}</div><Button variant="ghost" size="icon-sm" onClick={toggle} disabled={reduced} aria-label={`${playing ? 'Pause' : 'Play'} cloud demo`}>{playing ? <Pause size={13} /> : <Play size={13} />}</Button><Button variant="ghost" size="icon-sm" onClick={replay} disabled={reduced} aria-label="Replay cloud demo"><RotateCcw size={13} /></Button></div>
       </div>
-      <CloudWorkSurface step={step} playing={playing} />
+      <CloudWorkSurface step={step} playing={running} revision={revision} onChoose={choose} />
     </div><p className="cloud-work-note">Illustrative workflow · Sample apps and task data</p>
   </div></section>
 }

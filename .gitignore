@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Reproducible HyperFrames compilation and visual-check outputs
+video-source/phone/context/
+video-source/phone/skills/
+video-source/phone/coordination/

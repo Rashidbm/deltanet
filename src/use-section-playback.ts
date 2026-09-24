@@ -44,5 +44,5 @@ export function useSectionPlayback(durations: readonly number[], loop = false) {
   const toggle = () => setState(current => current.ended
     ? { step: 0, playing: true, ended: false, revision: current.revision + 1 }
     : { ...current, playing: !current.playing })
-  return { host, step: reduced ? durations.length - 1 : state.step, playing: state.playing && !reduced, reduced, choose, replay, toggle, revision: state.revision }
+  return { host, step: reduced ? durations.length - 1 : state.step, playing: state.playing && !reduced, running: state.playing && !reduced && visible, reduced, choose, replay, toggle, revision: state.revision }
 }
