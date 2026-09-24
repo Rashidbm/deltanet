@@ -85,7 +85,7 @@ function FeatureScene({ id, reduced }: { id: FeatureId; reduced: boolean }) {
   return <div ref={host} className="feature-scene">
     <div className="feature-film-column">
       <div className="feature-film" aria-label={`${story.title} video demonstration`}>
-        <video ref={video} className="feature-film-video" src={assetUrl(`/videos/${id}-tour.mp4`)} poster={assetUrl(`/videos/${id}-tour.jpg`)} muted playsInline preload="metadata" onLoadedMetadata={ready} onTimeUpdate={update} onEnded={ended} onError={fail} aria-label={`${story.title}: a private conversation and agent task details`} />
+        <video ref={video} className="feature-film-video" src={assetUrl(`/videos/${id}-tour.mp4?v=2`)} poster={assetUrl(`/videos/${id}-tour.jpg?v=2`)} muted playsInline preload="metadata" onLoadedMetadata={ready} onTimeUpdate={update} onEnded={ended} onError={fail} aria-label={`${story.title}: a private conversation and agent task details`} />
       </div>
       <details className="feature-transcript"><summary>{failed ? 'Video unavailable — read the demo' : 'Read the conversation'}</summary>{story.messages.map((message,index) => <p key={index}><strong>{message.role === 'user' ? 'You' : 'DeltaNet'}:</strong> {message.text}</p>)}</details>
     </div>

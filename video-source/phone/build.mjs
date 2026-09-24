@@ -23,7 +23,7 @@ gsap.set('.message',{opacity:0});gsap.set('.sheet',{y:520,opacity:0});gsap.set('
 // The camera moves the complete device, so the bezel leaves the frame naturally on closeups.
 tl.to('.film-camera',{scale:1.48,y:-490,duration:1.6,ease:'power2.inOut'},2);
 type('.draft',request,1.5,4);tl.set('.draft',{textContent:'Message DeltaNet'},6).fromTo('.m0',{y:12,opacity:0},{y:0,opacity:1,duration:.35,ease:'power3.out'},6);
-tl.to('.film-camera',{scale:1.48,y:245,duration:1.6,ease:'power2.inOut'},6.4);
+tl.to('.film-camera',{scale:1.48,y:310,duration:1.6,ease:'power2.inOut'},6.4);
 tl.set('.m1',{opacity:1},8.2);type('.m1',reply,8.2,2.8);
 tl.to('.task-pill',{opacity:1,duration:.35},12.3);
 tl.to('.film-camera',{scale:1.48,y:-450,duration:1.6,ease:'power2.inOut'},14.1);
@@ -35,7 +35,7 @@ tl.to('.sheet',{y:520,opacity:0,duration:.5,ease:'power2.inOut'},25.5).to('.dimm
 tl.to('.film-camera',{scale:1.48,y:-490,duration:1,ease:'power2.inOut'},25.7);
 type('.draft',follow,26.3,2.2);tl.set('.draft',{textContent:'Message DeltaNet'},29).fromTo('.m2',{y:12,opacity:0},{y:0,opacity:1,duration:.35,ease:'power3.out'},29);
 tl.set('.pill-copy',{textContent:'Working with the other agents'},29.5);
-tl.to('.film-camera',{scale:1.38,y:55,duration:1.7,ease:'power2.inOut'},29.3);
+tl.to('.film-camera',{scale:1.38,y:245,duration:1.7,ease:'power2.inOut'},29.3);
 tl.set('.m3',{opacity:1},31.2);type('.m3',result,31.2,3.2);
 tl.set('.pill-copy',{textContent:${JSON.stringify(d.done)}},36);
 tl.to('.film-camera',{scale:1,y:0,duration:1.8,ease:'power2.inOut'},36.5);
