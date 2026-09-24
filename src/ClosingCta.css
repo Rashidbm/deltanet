@@ -1,0 +1,23 @@
+.closing-cta { position: relative; isolation: isolate; background: #090a0c; color: #eeeef1; border-top: 1px solid #ffffff0e; padding: 100px 40px 105px; overflow: clip; }
+.closing-cta .hero-backdrop { opacity: .6; }
+.closing-layout { position: relative; display: flex; justify-content: center; text-align: center; }
+.closing-copy { width: 100%; max-width: 620px; }
+.closing-copy .proof-overline { font-size: 9px; margin-bottom: 27px; }
+.closing-copy h2 { margin: 0; font-size: clamp(34px,4vw,52px); line-height: 1.12; font-weight: 500; letter-spacing: -.045em; }
+.closing-copy h2 span { color: #9898a2; }
+.closing-copy > p:not(.proof-overline):not(.closing-note) { font-size: 13px; line-height: 1.85; color: #aaaab4; margin: 23px 0 29px; }
+.closing-signup { display: flex; gap: 8px; max-width: 470px; margin: 0 auto; }
+.closing-signup input { height: 46px; border-radius: 9px; border-color: #ffffff24; background: #131416b8; color: #eee; font-size: 13px; padding-inline: 15px; }
+.closing-signup input::placeholder { color: #94949e; }
+.closing-primary { flex: none; background: #ededf0; color: #161619; height: 46px; border-radius: 9px; padding-inline: 18px; font-size: 12px; box-shadow: none; cursor: pointer; }
+.closing-primary:hover { background: white; }
+.closing-primary:disabled { opacity: .8; }
+.closing-note { min-height: 18px; font-size: 11px; margin: 15px 0 0; color: #93939e; }
+.closing-note.signup-error { color: #eee; }
+.site-footer-section { padding: 0 40px; background: #09090a; }
+@media(max-width:600px) { .closing-cta { padding: 75px 24px; } .closing-copy h2 { font-size: 35px; } .closing-signup { flex-direction: column; max-width: 340px; } .closing-primary { width: 100%; } .site-footer-section { padding: 0 24px 30px; } }
+.closing-copy .proof-overline { justify-content: center; text-align: center; }
+.signup-email-field { position: relative; min-width: 0; flex: 1; }
+.signup-email-field kbd { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #8d8d97; font: inherit; font-size: 12px; pointer-events: none; }
+.closing-signup .signup-email-field input { padding-left: 55px; }
+@media (hover: none) { .signup-email-field kbd { display: none; } .closing-signup .signup-email-field input { padding-left: 15px; } }

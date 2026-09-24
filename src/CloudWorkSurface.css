@@ -1,0 +1,84 @@
+.cloud-work-section { padding: 56px 40px 34px; border-top: 1px solid #ffffff10; background: #0d0d0f; scroll-margin-top: 25px; }
+.cloud-work-section > .section-boundary > .proof-overline { margin-bottom: 30px; font-size: 9px; }
+.cloud-work-layout { display: grid; grid-template-columns: .82fr 1.3fr; gap: 48px; align-items: center; }
+.cloud-work-copy h2 { font-size: clamp(27px,2.8vw,36px); line-height: 1.18; letter-spacing: -.045em; margin: 0; font-weight: 500; color: #eeeef1; }
+.cloud-work-copy h2 span { color: #9f9fa8; }
+.cloud-work-intro { margin: 20px 0 29px; color: #9696a2; font-size: 13px; line-height: 1.8; }
+.cloud-work-update { border-top: 1px solid #ffffff16; padding-top: 20px; min-height: 152px; }
+.cloud-work-time { display: flex; align-items: center; gap: 9px; color: #d5d5de; margin-bottom: 17px; }
+.cloud-work-time > span { font-size: 17px; font-variant-numeric: tabular-nums; }
+.cloud-work-time small { margin-left: 7px; font-size: 8px; letter-spacing: 1.3px; color: #7e7e8a; }
+.cloud-work-update strong { font-size: 13px; font-weight: 450; color: #e1e1e8; }
+.cloud-work-update p { font-size: 11px; line-height: 1.8; color: #93939f; margin: 8px 0 0; max-width: 315px; }
+.cloud-work-controls { display: flex; align-items: center; gap: 2px; margin-top: 10px; }
+.cloud-work-controls > div { display: flex; gap: 6px; margin-right: 15px; }
+.cloud-work-controls > div button { width: 34px; height: 30px; display: grid; place-items: center; cursor: pointer; }
+.cloud-work-controls > div button span { width: 100%; height: 2px; border-radius: 1px; background: #3e3e48; transition: background 200ms ease; }
+.cloud-work-controls > div button[aria-pressed=true] span { background: #dddde5; }
+.cloud-work-controls [data-slot=button] { color: #aaaab7; cursor: pointer; }
+.cloud-work-note { font-size: 9px; color: #747480; text-align: right; margin: 17px 0 0; }
+.cloud-desktop { min-width: 0; position: relative; padding: 18px 23px 0; border-radius: 14px; border: 1px solid #ffffff20; background: radial-gradient(ellipse at 80% 10%,#ffffff16,transparent 60%),linear-gradient(140deg,#303136,#1e1f23 55%,#393a40); box-shadow: inset 0 1px #ffffff09; }
+.cloud-desktop-caption { display: flex; justify-content: space-between; font-size: 8px; letter-spacing: .8px; color: #a6a6af; margin-bottom: 17px; }
+.cloud-desktop-caption > span:last-child { letter-spacing: 0; color: #9696a0; }
+.cloud-browser { position: relative; background: #151619; border: 1px solid #616268; border-radius: 8px; overflow: hidden; box-shadow: 0 14px 28px #0006,0 2px 5px #0007; }
+.cloud-browser-tabs { display: flex; align-items: stretch; padding: 7px 8px 0; gap: 3px; background: #25262a; height: 36px; color: #90919a; }
+.mac-window-controls { display: flex; align-items: center; gap: 5px; padding: 0 13px 6px 3px; }
+.mac-window-controls i { width: 7px; height: 7px; border-radius: 50%; background: #77787e; }
+.cloud-browser-tabs > div:not(.mac-window-controls) { display: flex; align-items: center; gap: 7px; font-size: 9px; padding: 0 12px; border-radius: 5px 5px 0 0; min-width: 124px; transition: background 200ms,color 200ms; }
+.cloud-browser-tabs > div.is-current { background: #35363c; color: #e0e0e6; }
+.cloud-browser-tabs img { width: 12px; height: 12px; }
+.cloud-desktop img[src="/apps/github.svg"] { filter: brightness(0) invert(1); opacity: .88; }
+.delta-tab-icon { filter: brightness(0) invert(1); }
+.cloud-browser-address { height: 32px; display: flex; gap: 10px; align-items: center; padding: 0 11px; background: #35363c; color: #898a95; }
+.cloud-browser-address > span { display: flex; align-items: center; justify-content: center; gap: 8px; background: #24252a; flex: 1; height: 21px; border-radius: 4px; font-size: 9px; color: #b6b6c0; }
+.cloud-browser-viewport { height: 291px; position: relative; overflow: hidden; }
+.cloud-job-view, .cloud-brief-view { position: absolute; inset: 0; background: #17181c; }
+.cloud-job-view > header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ffffff12; height: 36px; padding: 0 18px; color: #9fa0ac; font-size: 10px; }
+.cloud-job-view > header > div { display: flex; align-items: center; gap: 9px; }
+.cloud-job-view > header img { width: 15px; height: 15px; }
+.cloud-job-view > header b { color: #61626d; font-weight: 400; padding: 0 7px; }
+.cloud-job-view > header > span { font-size: 9px; color: #797a86; }
+.cloud-job-title { padding: 14px 18px 13px; }
+.cloud-job-title h3 { font-size: 16px; font-weight: 550; letter-spacing: -.3px; margin: 0 0 4px; }
+.cloud-job-title p { font-size: 10px; margin: 0; color: #bcbcc6; }
+.cloud-job-title p span { color: #7d7e89; }
+.cloud-job-row { display: flex; align-items: center; gap: 9px; margin: 0 11px; height: 29px; padding: 0 8px; font-size: 10px; }
+.cloud-job-row > svg { color: #a5a6b0; flex: none; }
+.cloud-job-row small { margin-left: auto; color: #7d7e89; font-size: 9px; }
+.cloud-test-row { border-radius: 4px; background: #2b2c32; }
+.cloud-job-spinner { display: block; flex: none; width: 11px; height: 11px; border-radius: 50%; border: 1px solid #686972; border-top-color: #e2e2ec; animation: cloud-job-spin 1s linear infinite; }
+.cloud-desktop[data-playing=false] .cloud-job-spinner { animation-play-state: paused; }
+.cloud-job-log { padding: 8px 19px 0 39px; font-size: 9px; line-height: 1.9; }
+.cloud-job-log > div { display: flex; gap: 13px; }
+.cloud-job-log > div > span { color: #626471; width: 9px; font-variant-numeric: tabular-nums; }
+.cloud-job-log code { color: #c1c2cc; font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size: inherit; }
+.cloud-job-log > div:not(:first-child) { opacity: 0; transform: translateY(3px); transition: opacity 250ms ease,transform 250ms cubic-bezier(.22,1,.36,1); }
+.cloud-job-log > div.is-visible { opacity: 1; transform: none; }
+.cloud-job-log > div:nth-child(3) { transition-delay: 120ms; }
+.cloud-job-log > div:nth-child(4) { transition-delay: 240ms; }
+.cloud-brief-view { background: #1b1b1e; }
+.cloud-brief-view > header { display: flex; align-items: center; gap: 7px; height: 36px; padding: 0 18px; border-bottom: 1px solid #ffffff10; font-size: 10px; color: #bcbcc6; }
+.cloud-brief-view > header > span { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 8px; color: #868692; }
+.cloud-brief-view article { padding: 22px 30px; }
+.cloud-brief-date { color: #898996; font-size: 8px; letter-spacing: 1px; }
+.cloud-brief-view h3 { font-size: 23px; font-weight: 500; letter-spacing: -.7px; margin: 9px 0; }
+.cloud-brief-view article > p { color: #b9b9c4; font-size: 11px; margin: 0 0 14px; line-height: 1.65; }
+.cloud-brief-evidence { display: flex; align-items: center; gap: 7px; color: #a3a3b0; font-size: 9px; }
+.cloud-brief-evidence img { width: 13px; height: 13px; }
+.cloud-brief-evidence > svg { margin-left: 4px; }
+.cloud-brief-decision { display: flex; align-items: flex-start; gap: 9px; border-top: 1px solid #ffffff14; padding-top: 15px; margin-top: 17px; }
+.cloud-brief-decision > span { display: grid; place-items: center; width: 24px; height: 24px; background: #34343a; border-radius: 50%; font-size: 9px; flex: none; }
+.cloud-brief-decision strong { font-size: 10px; font-weight: 500; }
+.cloud-brief-decision p { font-size: 9px; color: #93939f; margin: 5px 0 0; }
+.cloud-brief-view footer { display: flex; align-items: center; gap: 6px; font-size: 8px; margin-top: 17px; color: #7a7a88; }
+.cloud-agent-pointer { position: absolute; z-index: 3; pointer-events: none; display: flex; align-items: flex-start; filter: drop-shadow(0 2px 3px #0006); }
+.cloud-agent-pointer > span { margin-top: 17px; margin-left: -4px; background: #e3e3e8; color: #28282c; font-size: 8px; line-height: 1.2; padding: 5px 7px; border-radius: 3px; white-space: nowrap; }
+.cloud-desktop-task { display: flex; gap: 8px; align-items: center; height: 40px; color: #c3c3cb; font-size: 9px; }
+.cloud-desktop-task > span:last-child { margin-left: auto; color: #8f8f9a; font-size: 8px; }
+.cloud-task-indicator { display: grid; place-items: center; width: 14px; }
+.cloud-task-indicator > span { width: 5px; height: 5px; background: #c7c7d0; border-radius: 50%; }
+@keyframes cloud-job-spin { to { transform: rotate(360deg); } }
+@media(max-width:1050px) { .cloud-work-layout { gap: 28px; grid-template-columns: .8fr 1.2fr; } .cloud-desktop { padding: 15px 15px 0; } .cloud-work-copy h2 { font-size: 28px; } .cloud-desktop-caption > span:last-child { font-size: 7px; } .cloud-brief-view article { padding-inline: 20px; } }
+@media(max-width:760px) { .cloud-work-section { padding: 42px 24px 28px; } .cloud-work-layout { grid-template-columns: 1fr; gap: 25px; } .cloud-work-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; } .cloud-work-copy h2 { font-size: 28px; grid-column: 1/-1; } .cloud-work-intro { font-size: 11px; margin: 15px 0 0; } .cloud-work-update { min-height: 130px; grid-column: 2; grid-row: 2/4; border: 0; padding-top: 15px; } .cloud-work-time { margin-bottom: 8px; } .cloud-work-update strong { font-size: 11px; } .cloud-work-update p { font-size: 10px; } .cloud-work-controls { margin-top: 4px; } .cloud-work-controls > div { gap: 4px; margin-right: 3px; } .cloud-work-controls > div button { width: 20px; } .cloud-work-note { font-size: 8px; } .cloud-desktop { max-width: 630px; width: 100%; margin: 0 auto; } }
+@media(max-width:480px) { .cloud-work-section { padding-inline: 20px; } .cloud-work-section > .section-boundary > .proof-overline { font-size: 8px; } .cloud-work-copy { grid-template-columns: 1fr; } .cloud-work-copy h2 { font-size: 31px; } .cloud-work-intro { display: none; } .cloud-work-update { grid-column: 1; grid-row: auto; min-height: 128px; margin-top: 10px; } .cloud-work-update strong { font-size: 13px; } .cloud-work-update p { font-size: 11px; } .cloud-work-controls > div button { width: 30px; } .cloud-desktop { padding: 12px 10px 0; } .cloud-desktop-caption { font-size: 7px; margin-bottom: 12px; } .cloud-desktop-caption > span:last-child { font-size: 6px; } .cloud-browser-tabs > div:not(.mac-window-controls) { min-width: 0; padding-inline: 7px; font-size: 8px; } .mac-window-controls { padding-right: 7px; gap: 3px; } .mac-window-controls i { width: 6px; height: 6px; } .cloud-browser-address { gap: 6px; padding-inline: 7px; } .cloud-browser-address > span { font-size: 8px; } .cloud-browser-viewport { height: 290px; } .cloud-job-log { font-size: 8px; padding-left: 19px; } .cloud-job-log > div { gap: 8px; } .cloud-brief-view article { padding: 22px 17px; } .cloud-brief-view h3 { font-size: 22px; } .cloud-agent-pointer > span { font-size: 7px; padding: 4px 5px; } .cloud-desktop-task { font-size: 8px; } .cloud-desktop-task > span:last-child { font-size: 7px; } }
+@media(prefers-reduced-motion:reduce) { .cloud-desktop *, .cloud-desktop *::before { animation: none !important; transition: none !important; } }
