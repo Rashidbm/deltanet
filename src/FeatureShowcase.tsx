@@ -1,3 +1,4 @@
+import { assetUrl } from './lib/asset-url'
 import { memo, useEffect, useRef, useState, type CSSProperties } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { BookOpen, Check, ChevronRight, FileText, LockKeyhole, Pause, Play, RotateCcw, ArrowRight } from 'lucide-react'
@@ -7,10 +8,10 @@ import { features, STORY_DURATION, storyActivity, visibleStoryText, type Feature
 import './FeatureShowcase.css'
 
 function SystemIcon({ name }: { name: string }) {
-  return <span className="phone-system-icon" style={{ '--symbol': `url('/device/icons/${name}.png')` } as CSSProperties} aria-hidden="true" />
+  return <span className="phone-system-icon" style={{ '--symbol': `url('${assetUrl(`/device/icons/${name}.png`)}')` } as CSSProperties} aria-hidden="true" />
 }
 function SourceIcon({ name }: { name: string }) {
-  return <img className={`feature-source-icon ${name}`} src={`/apps/${name}.svg`} alt="" />
+  return <img className={`feature-source-icon ${name}`} src={assetUrl(`/apps/${name}.svg`)} alt="" />
 }
 
 function useFeaturePlayback(reduced: boolean) {
@@ -69,7 +70,7 @@ function PhoneStory({ id, time, reduced }: { id: FeatureId; time: number; reduce
         </div>
         <div className="feature-phone-home" aria-hidden="true" />
       </div>
-      <img className="feature-phone-bezel" src="/device/iphone-15-black.png" width="1419" height="2796" alt="" loading="lazy" />
+      <img className="feature-phone-bezel" src={assetUrl('/device/iphone-15-black.png')} width="1419" height="2796" alt="" loading="lazy" />
     </div>
   </div>
 }
@@ -89,7 +90,7 @@ function ContextPanels({ time }: { time: number }) {
 }
 function SkillPanels({ time }: { time: number }) {
   return <>
-    <article className="feature-glass"><div className="glass-eyebrow">SHARED SKILL</div><div className="glass-title-icon"><BookOpen size={20} /><h3>Incident response</h3></div><p className="glass-description">One team procedure. Available to both agents.</p><ol className="glass-procedure"><li><span>01</span>Investigate the release</li><li className={time >= 7.6 ? 'is-current' : ''}><span>02</span>Verify recovery</li><li><span>03</span>Review the customer update</li></ol><a className="glass-link" href="/demo/skills/incident-response/SKILL.md" target="_blank" rel="noreferrer">View the shared skill <ChevronRight size={13} /></a></article>
+    <article className="feature-glass"><div className="glass-eyebrow">SHARED SKILL</div><div className="glass-title-icon"><BookOpen size={20} /><h3>Incident response</h3></div><p className="glass-description">One team procedure. Available to both agents.</p><ol className="glass-procedure"><li><span>01</span>Investigate the release</li><li className={time >= 7.6 ? 'is-current' : ''}><span>02</span>Verify recovery</li><li><span>03</span>Review the customer update</li></ol><a className="glass-link" href={assetUrl('/demo/skills/incident-response/SKILL.md')} target="_blank" rel="noreferrer">View the shared skill <ChevronRight size={13} /></a></article>
     <article className="feature-glass"><div className="glass-eyebrow">SAME SKILL, DIFFERENT ROLES</div><div className="glass-person"><span className="glass-initial">O</span><span><strong>Omar’s agent</strong><small>{time >= 10.2 ? 'Using: Verify recovery' : 'Engineering'}</small></span>{time >= 10.2 && <BookOpen size={15} />}</div><div className="glass-person"><span className="glass-initial">N</span><span><strong>Noura’s agent</strong><small>{time >= 10.2 ? 'Using: Customer update' : 'Customer Success'}</small></span>{time >= 10.2 && <BookOpen size={15} />}</div><div className="glass-private"><LockKeyhole size={12} /> Verification comes before sending.</div></article>
   </>
 }

@@ -29,7 +29,7 @@ export function ClosingCta() {
     if (state === 'sending' || state === 'success') return
     setState('sending')
     try {
-      const response = await fetch('/api/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
+      const response = await fetch(import.meta.env.VITE_WAITLIST_URL || '/api/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
       if (!response.ok || !(await response.json()).ok) throw new Error('Signup failed')
       setState('success')
     } catch { setState('error') }

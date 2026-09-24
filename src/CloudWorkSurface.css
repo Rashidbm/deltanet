@@ -27,7 +27,7 @@
 .cloud-browser-tabs > div:not(.mac-window-controls) { display: flex; align-items: center; gap: 7px; font-size: 9px; padding: 0 12px; border-radius: 5px 5px 0 0; min-width: 124px; transition: background 200ms,color 200ms; }
 .cloud-browser-tabs > div.is-current { background: #35363c; color: #e0e0e6; }
 .cloud-browser-tabs img { width: 12px; height: 12px; }
-.cloud-desktop img[src="/apps/github.svg"] { filter: brightness(0) invert(1); opacity: .88; }
+.cloud-desktop img[src$="/apps/github.svg"] { filter: brightness(0) invert(1); opacity: .88; }
 .delta-tab-icon { filter: brightness(0) invert(1); }
 .cloud-browser-address { height: 32px; display: flex; gap: 10px; align-items: center; padding: 0 11px; background: #35363c; color: #898a95; }
 .cloud-browser-address > span { display: flex; align-items: center; justify-content: center; gap: 8px; background: #24252a; flex: 1; height: 21px; border-radius: 4px; font-size: 9px; color: #b6b6c0; }

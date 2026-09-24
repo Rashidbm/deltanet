@@ -1,3 +1,4 @@
+import { assetUrl } from './lib/asset-url'
 import { memo, useEffect, useState, type ReactNode } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, ArrowUpRight, BookOpen, Check, ChevronRight, Clock3, Cloud, Cpu, FileText, GitBranch, Layers, LockKeyhole, Moon, Pause, Play, RotateCcw, Sun, Workflow } from 'lucide-react'
@@ -15,7 +16,7 @@ const CLOUD_TIMING = [4000, 4500, 5000] as const
 const fade = { duration: .25, ease: [.22, 1, .36, 1] as const }
 
 function AppMark({ app }: { app: string }) {
-  return <img className={`proof-app ${app}`} src={`/apps/${app}.svg`} alt={appNames[app]} width="22" height="22" loading="lazy" />
+  return <img className={`proof-app ${app}`} src={assetUrl(`/apps/${app}.svg`)} alt={appNames[app]} width="22" height="22" loading="lazy" />
 }
 function SectionHeading({ number, label, title, children }: { number: string; label: string; title: ReactNode; children: ReactNode }) {
   return <header className="proof-heading"><div><p className="proof-overline"><span>{number}</span>{label}</p><h2>{title}</h2></div><p className="proof-intro">{children}</p></header>
@@ -40,7 +41,7 @@ function ConnectionScene({ story }: { story: typeof connectorStories[number] }) 
         <h3>{source.title}</h3><p className="excerpt-location">{source.location}</p><blockquote>“{source.quote}”</blockquote>
         <div className="excerpt-state">{step >= index ? <Check size={12} /> : <Clock3 size={12} />}{step >= index ? 'Source reviewed' : 'Finding the latest context'}</div>
       </article>)}
-      <div className="context-junction" aria-hidden="true"><span /><div><img src="/logo-options/split-delta.svg" alt="" width="23" height="23" /></div><span /></div>
+      <div className="context-junction" aria-hidden="true"><span /><div><img src={assetUrl('/logo-options/split-delta.svg')} alt="" width="23" height="23" /></div><span /></div>
     </div>
     <div className={`connector-outcome ${step === 2 ? 'is-ready' : ''}`}><div className="outcome-icon"><AppMark app={story.resultApp} /></div><div><span className="proof-small-label">{step === 2 ? story.resultStatus : 'CONTEXT → ACTION'}</span><h3>{story.resultTitle}</h3><p>{story.resultMeta}</p></div><span className="outcome-check">{step === 2 ? <Check size={17} /> : <FileText size={17} />}</span></div>
     <div className="connector-caption"><Swap identity={step}><p>{step === 0 ? 'Reading the source material.' : step === 1 ? 'Checking it against the latest conversation.' : story.summary}</p></Swap></div>
@@ -72,7 +73,7 @@ function LearningSection() {
           </Swap>
         </div>
         <div className="learning-transfer" aria-hidden="true"><span /><ArrowRight size={16} /><span /></div>
-        <div className="learning-skill"><header><BookOpen size={16} /><span>Release checks</span><span className="skill-version">{step === 0 ? 'v1 → v2' : 'v2'}</span></header><div className="skill-document"><span className="proof-small-label">ENGINEERING / SHARED SKILLS</span><h3>Before checkout ships.</h3><p>Verify the payment flows before clearing a release.</p><div className="skill-check"><Check size={14} /><span>Complete a new-card payment</span></div><div className={`skill-check skill-addition ${step === 0 ? 'is-proposed' : ''}`}><span>{step === 0 ? '+' : <Check size={14} />}</span><div>Complete a saved-card payment<small>{step === 0 ? 'Proposed addition' : step === 1 ? 'Published to the team' : 'Included in Rashid’s release check'}</small></div></div><div className="skill-check"><Check size={14} /><span>Record the verification results</span></div><div className="skill-source"><span className="proof-initial">O</span><span>From Omar’s incident review<small>{step === 0 ? 'Awaiting publication' : 'Approved revision · Available to Engineering'}</small></span></div></div><a href="/demo/skills/release-checks/SKILL.md" target="_blank" rel="noreferrer">Read the shared skill <ArrowUpRight size={14} /></a></div>
+        <div className="learning-skill"><header><BookOpen size={16} /><span>Release checks</span><span className="skill-version">{step === 0 ? 'v1 → v2' : 'v2'}</span></header><div className="skill-document"><span className="proof-small-label">ENGINEERING / SHARED SKILLS</span><h3>Before checkout ships.</h3><p>Verify the payment flows before clearing a release.</p><div className="skill-check"><Check size={14} /><span>Complete a new-card payment</span></div><div className={`skill-check skill-addition ${step === 0 ? 'is-proposed' : ''}`}><span>{step === 0 ? '+' : <Check size={14} />}</span><div>Complete a saved-card payment<small>{step === 0 ? 'Proposed addition' : step === 1 ? 'Published to the team' : 'Included in Rashid’s release check'}</small></div></div><div className="skill-check"><Check size={14} /><span>Record the verification results</span></div><div className="skill-source"><span className="proof-initial">O</span><span>From Omar’s incident review<small>{step === 0 ? 'Awaiting publication' : 'Approved revision · Available to Engineering'}</small></span></div></div><a href={assetUrl('/demo/skills/release-checks/SKILL.md')} target="_blank" rel="noreferrer">Read the shared skill <ArrowUpRight size={14} /></a></div>
       </div>
       <DemoControls label="learning demo" steps={['Correct', 'Share', 'Apply']} step={step} playing={playing} reduced={reduced} onStep={choose} onToggle={toggle} onReplay={replay} />
     </div>
@@ -140,5 +141,5 @@ export const ProductSections = memo(function ProductSections() {
     const id = location.hash.slice(1)
     if (['connections', 'learning', 'cloud', 'architecture', 'join'].includes(id)) document.getElementById(id)?.scrollIntoView({ block: 'start' })
   }, [])
-  return <div className="product-sections dark"><ConnectionsSection /><LearningSection /><CloudSection /><ArchitectureSection /><ClosingCta /><div className="site-footer-section"><div className="section-boundary"><footer className="product-footer"><a className="product-footer-brand" href="?hero=1"><img src="/logo-options/split-delta.svg" alt="" width="22" height="22" />DeltaNet</a><span>Private work. Shared progress.</span><a href="#product-preview">Back to the demo <ArrowRight size={13} /></a></footer></div></div></div>
+  return <div className="product-sections dark"><ConnectionsSection /><LearningSection /><CloudSection /><ArchitectureSection /><ClosingCta /><div className="site-footer-section"><div className="section-boundary"><footer className="product-footer"><a className="product-footer-brand" href="?hero=1"><img src={assetUrl('/logo-options/split-delta.svg')} alt="" width="22" height="22" />DeltaNet</a><span>Private work. Shared progress.</span><a href="#product-preview">Back to the demo <ArrowRight size={13} /></a></footer></div></div></div>
 })

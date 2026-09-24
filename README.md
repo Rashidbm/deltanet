@@ -93,3 +93,7 @@ The root route now opens the full landing page; `?hero=0` opens the isolated des
 Hosting uses the registered Sites project in `.openai/hosting.json`. Build with `npm run build` then `node scripts/build-hosting.mjs` to arrange the frontend in `dist/client` and API Worker in `dist/server`. Watch and logo-option experiments are excluded from the published assets. Database schema is in `db/schema.ts`; append migrations with `npx drizzle-kit generate` before publishing. Run `node scripts/check-waitlist.mjs` for API/storage checks. Read/export signups using the private Sites database tools; there is intentionally no public list endpoint.
 
 The email signup supports ⌘K on Mac / Ctrl+K elsewhere, outside editable fields. The shortcut scrolls to and focuses the signup. Its hint is hidden on touch devices.
+
+## GitHub Pages
+
+The public landing page is deployed from `main` by `.github/workflows/pages.yml` to https://rashidbm.github.io/deltanet/. Public assets respect Vite’s base path. The static page posts email signups to the existing D1-backed signup service; that service permits the GitHub Pages origin and provides no public read endpoint. To build locally for Pages, set `DELTANET_BASE_PATH=/deltanet/` and `VITE_WAITLIST_URL=https://deltanet.taskreminderbyrsh.chatgpt.site/api/waitlist` when running `npm run build`, followed by `node scripts/prepare-pages.mjs`.

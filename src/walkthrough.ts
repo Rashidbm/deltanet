@@ -1,9 +1,10 @@
+import { assetUrl } from './lib/asset-url'
 /** Fictional presentation only. State is a pure function of time; no external actions. */
 export type Worker = 'rashid' | 'omar' | 'noura'
 export type Turn = { id: string; from: 'user' | 'assistant'; text: string; start: number; duration: number; send?: number }
 export type Scene = { id: string; worker: Worker; name: string; fullName: string; role: string; title: string; start: number; end: number; apps: string[]; turns: Turn[] }
 export const DURATION = 40
-export const sharedSkill = { id: 'incident-response', name: 'Incident response', version: '1.0', steps: ['Investigate', 'Verify recovery', 'Customer update'], href: '/demo/skills/incident-response/SKILL.md' }
+export const sharedSkill = { id: 'incident-response', name: 'Incident response', version: '1.0', steps: ['Investigate', 'Verify recovery', 'Customer update'], href: assetUrl('/demo/skills/incident-response/SKILL.md') }
 export const scenes: Scene[] = [
   { id: 'request', worker: 'rashid', name: 'Rashid', fullName: 'Rashid', role: 'Private workspace', title: 'Checkout incident', start: 0, end: 10,
     apps: ['google-drive', 'slack', 'linear'], turns: [

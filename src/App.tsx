@@ -1,3 +1,4 @@
+import { assetUrl } from './lib/asset-url'
 import { memo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { ArrowUp, ArrowUpRight, BookOpen, Check, ChevronRight, CircleDashed, Copy, FileText, GitPullRequest, Inbox, LockKeyhole, Maximize2, MessageSquare, Minimize2, MoreHorizontal, PanelRight, Pause, Play, Plus, LoaderCircle, ArrowRight, RotateCcw, Search, SignalHigh, SquarePen, X } from 'lucide-react'
 import { Sidebar, SidebarProvider, SidebarHeader, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger, SidebarInset, useSidebar } from '@/components/ui/sidebar'
@@ -31,7 +32,7 @@ const connections = [
   { id: 'notion', name: 'Notion', detail: 'Company knowledge and project notes', source: '', owner: '' },
 ]
 type DialogKind = 'connections' | 'context' | 'runbook' | 'pull-request' | 'email' | 'references' | 'shared-context' | 'skill' | null
-function AppIcon({ name }: { name: string }) { return <img className={`app-icon ${name}`} src={`/apps/${name}.svg`} alt={connections.find(app => app.id === name)?.name || name} /> }
+function AppIcon({ name }: { name: string }) { return <img className={`app-icon ${name}`} src={assetUrl(`/apps/${name}.svg`)} alt={connections.find(app => app.id === name)?.name || name} /> }
 function Person({ name, tone = '' }: { name: string; tone?: string }) { return <Avatar className={`person ${tone}`}><AvatarFallback>{name[0]}</AvatarFallback></Avatar> }
 function IconButton({ label, children, onClick }: { label: string; children: ReactNode; onClick: () => void }) {
   return <Tooltip><TooltipTrigger asChild><Button variant="ghost" size="icon" aria-label={label} onClick={onClick}>{children}</Button></TooltipTrigger><TooltipContent>{label}</TooltipContent></Tooltip>

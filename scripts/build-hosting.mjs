@@ -6,7 +6,8 @@ for (const entry of await readdir('dist')) {
   await rename(`dist/${entry}`, `dist/client/${entry}`)
 }
 await rm('dist/client/watch', { recursive: true, force: true })
-await rm('dist/client/logo-options', { recursive: true, force: true })
+await rm('dist/client/logo-options/index.html', { force: true })
+await rm('dist/client/logo-options/parallel-delta.svg', { force: true })
 await mkdir('dist/server', { recursive: true })
 await cp('worker/index.js', 'dist/server/index.js')
 await mkdir('dist/.openai', { recursive: true })
