@@ -1,0 +1,157 @@
+/* Phone layouts keep the product readable instead of scaling desktop chrome down. */
+@media (max-width: 700px) {
+  .landing-nav { margin-inline: 20px; height: 68px; gap: 16px; }
+  .landing-nav-cta { min-height: 44px; padding-inline: 18px; }
+  .hero-composition .hero-preview { padding: 12px 16px 48px; }
+  .hero-composition .hero-intro { padding: 24px 0 28px; }
+  .collaborative-heading { padding: 4px 0 8px; }
+  .hero-composition .hero-intro h1 { font-size: clamp(36px, 9.8vw, 46px); line-height: 1.12; }
+  .coauthored-line { display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; white-space: normal; font-size: 23px; line-height: 1.45; margin-top: 18px; min-height: 68px; }
+  .coauthored-line > .coauthor-phrase:last-child { flex-basis: 100%; display: grid; grid-template-columns: max-content; justify-content: center; }
+  .hero-intro p { max-width: 360px; margin-inline: auto; }
+  .hero-composition .hero-intro p { margin-top: 5px; font-size: 14px; line-height: 1.65; }
+  .hero-composition .workspace-frame { height: 540px; border-radius: 16px; }
+  .hero-composition .perspective-bar { padding-bottom: 12px; }
+  .playback-buttons button { width: 44px; height: 44px; }
+  .hero-preview .chat-content { padding: 18px 16px; }
+  .hero-preview .composer-wrap { padding: 8px 12px 12px; }
+  .hero-preview .composer textarea { font-size: 16px; }
+  .composer-note { font-size: 9px; line-height: 1.5; text-align: center; }
+  .activity-copy strong { font-size: 12px; }
+  .activity-copy p { font-size: 10px; }
+  .feature-showcase, .product-section, .cloud-work-section { padding: 56px 20px; }
+  .feature-section-heading, .proof-heading { margin-bottom: 28px; }
+  .feature-section-heading h2, .proof-heading h2, .cloud-work-copy h2 { font-size: clamp(30px, 8.7vw, 38px); line-height: 1.13; letter-spacing: -.045em; }
+  .feature-section-heading > p:last-child, .proof-intro, .cloud-work-intro { font-size: 14px; line-height: 1.7; }
+  .feature-overline, .proof-overline { font-size: 10px; line-height: 1.6; letter-spacing: .06em; }
+  .feature-selector [data-slot=tabs-list] { gap: 12px; margin-bottom: 12px; }
+  .feature-selector [data-slot=tabs-trigger] { min-height: 52px; align-items: center; }
+  .feature-selector strong { font-size: 13px; line-height: 1.4; }
+  .feature-film-column { width: calc(100% + 24px); max-width: 480px; }
+  .feature-chapter-caption { min-height: 62px; align-items: flex-start; padding-top: 16px; }
+  .feature-chapter-caption p { font-size: 14px; }
+  .feature-chapter-caption > span { font-size: 10px; padding-top: 5px; }
+  .feature-chapters button { min-height: 50px; font-size: 12px; }
+  .feature-chapters button span { font-size: 10px; }
+  .feature-player button { width: 44px; height: 44px; }
+  .feature-duration { font-size: 11px; }
+  .feature-scrubber { height: 6px; }
+  .feature-scrubber::-webkit-slider-thumb { width: 18px; height: 18px; }
+  .feature-transcript { font-size: 12px; }
+  .feature-transcript summary { padding: 12px; }
+  .feature-evidence-stack { margin-top: 18px; }
+  .feature-glass { padding: 18px; backdrop-filter: none; }
+  .glass-description, .glass-receipt > p, .glass-person strong { font-size: 13px; }
+  .glass-eyebrow, .glass-private, .glass-person small { font-size: 11px; }
+  .feature-fixture, .proof-disclosure, .cloud-work-note { font-size: 10px; line-height: 1.6; text-align: left; }
+  .connection-tabs [data-slot=tabs-list] { width: 100%; gap: 12px; }
+  .connection-tabs [data-slot=tabs-trigger] { min-height: 48px; font-size: 12px; }
+  .connection-demo { padding-top: 22px; }
+  .connector-prompt { padding-inline: 16px; font-size: 14px; }
+  .connection-evidence { margin-inline: 16px; }
+  .source-excerpt { padding: 16px; }
+  .source-excerpt h3 { font-size: 15px; }
+  .source-excerpt blockquote { font-size: 13px; line-height: 1.65; }
+  .source-excerpt header, .excerpt-location, .excerpt-state { font-size: 11px; }
+  .connector-outcome { margin-inline: 16px; }
+  .connector-outcome h3 { font-size: 14px; }
+  .connector-outcome p, .connector-caption { font-size: 12px; }
+  .proof-controls { padding-inline: 12px; gap: 6px; }
+  .proof-steps { gap: 14px; }
+  .proof-steps button { min-height: 44px; font-size: 12px; }
+  .proof-playback button { min-width: 40px; min-height: 44px; }
+  .connector-directory { justify-content: flex-start; gap: 18px 22px; margin-top: 26px; }
+  .connector-directory > span { font-size: 12px; }
+  .learning-scene { padding: 22px 18px; gap: 24px; }
+  .learning-conversation { min-height: 0; }
+  .learning-bubble, .learning-reply > p { font-size: 14px; line-height: 1.7; }
+  .learning-inline-note { margin-top: 16px; font-size: 11px; }
+  .skill-document > p, .skill-check { font-size: 12px; }
+  .learning-skill > a { min-height: 44px; font-size: 12px; }
+  .learning-principles p { font-size: 12px; }
+  .architecture-diagram { width: 100%; margin: 0; }
+  .architecture-explorer { gap: 12px; margin-top: 0; }
+  .architecture-tabs { gap: 0; padding-bottom: 12px; }
+  .architecture-tabs button { min-height: 44px; font-size: 12px; padding-inline: 6px; }
+  .architecture-detail { min-height: 0; padding-top: 22px; }
+  .architecture-detail > .proof-swap > p { font-size: 14px; }
+  .architecture-example p, .architecture-memory p { font-size: 12px; }
+  .architecture-chips span { font-size: 11px; }
+  .architecture-memory { margin-top: 24px; }
+  .architecture-memory a { font-size: 12px; white-space: normal; }
+  .harness-connections small { font-size: 11px; line-height: 1.5; }
+  .closing-cta { padding: 64px 20px; }
+  .closing-copy h2 { font-size: clamp(30px, 8.5vw, 38px); }
+  .closing-copy > p:not(.proof-overline):not(.closing-note) { font-size: 14px; }
+  .closing-signup { max-width: none; gap: 12px; }
+  .closing-signup input { min-height: 52px; font-size: 16px; padding-left: 16px !important; }
+  .signup-email-field kbd { display: none; }
+  .closing-primary { height: 50px; font-size: 14px; }
+  .closing-note { font-size: 12px; line-height: 1.6; }
+  .product-footer { padding: 24px 0; justify-content: space-between; }
+  .product-footer > a:last-child { min-height: 44px; }
+
+  /* Keep recognizable app structure, but read the work at phone scale. */
+  .cloud-work-layout { gap: 24px; }
+  .cloud-work-update { min-height: 0; }
+  .cloud-work-update p { font-size: 13px; max-width: none; }
+  .cloud-work-controls button { min-width: 44px; min-height: 44px; }
+  .work-desktop { padding: 0 8px; }
+  .work-mac-menu { margin: 0 -8px 10px; font-size: 9px; gap: 12px; }
+  .work-mac-menu > span:not(.mac-apple):not(.mac-menu-time) { display: none; }
+  .work-tabs { padding-inline: 5px; height: 46px; }
+  .work-traffic { display: none; }
+  .work-tab-list button { font-size: 10px; padding-inline: 6px; gap: 5px; }
+  .work-tab-list button > svg:last-child { display: none; }
+  .work-address { height: 34px; }
+  .work-address > span { font-size: 9px; }
+  .work-app-panel { height: 450px; }
+  .work-search-top { padding-inline: 12px; gap: 8px; }
+  .google-word { width: 48px; }
+  .work-search-input { font-size: 10px; min-width: 0; overflow: hidden; }
+  .work-search-input > svg { display: none; }
+  .work-search-top .work-profile { display: none; }
+  .work-search-filters { font-size: 11px; gap: 17px; padding-left: 16px; }
+  .work-search-results { padding: 16px; }
+  .work-search-result > strong { font-size: 14px; }
+  .work-search-result > p { font-size: 11px; line-height: 1.5; }
+  .result-site { font-size: 11px; }
+  .result-site small { font-size: 9px; }
+  .work-source-popover { width: 220px; }
+  .work-source-popover > span, .work-source-popover small { font-size: 9px; }
+  .work-source-popover > strong, .work-source-popover p { font-size: 12px; }
+  .sheets-heading strong { font-size: 13px; }
+  .sheets-heading nav { font-size: 9px; }
+  .sheets-share { font-size: 10px; }
+  .sheets-grid { overflow: auto; max-height: 255px; touch-action: pan-x pan-y; }
+  .sheets-grid table { min-width: 550px; font-size: 11px; }
+  .sheets-grid th, .sheets-grid td { height: 32px; }
+  .sheets-grid td.status-cell > span { font-size: 10px; }
+  .sheets-bottom > span { font-size: 11px; }
+  .sheets-bottom small { display: none; }
+  .work-handoff-receipt strong { font-size: 11px; }
+  .work-handoff-receipt small { font-size: 10px; }
+  .work-gmail > header > strong { font-size: 16px; }
+  .work-gmail > header > span:not(.work-profile) { font-size: 11px; }
+  .work-gmail aside, .gmail-inbox { display: none; }
+  .gmail-draft { left: 8px; right: 8px; width: auto; top: 48px; bottom: 48px; border-bottom: 1px solid #5f6368; border-radius: 6px; }
+  .gmail-draft-title { height: 30px; font-size: 11px; }
+  .gmail-recipient, .gmail-subject { height: 30px; font-size: 11px; }
+  .gmail-recipient > span { font-size: 10px; }
+  .gmail-body { font-size: 12px; line-height: 1.6; overflow-y: auto; }
+  .gmail-attachment { font-size: 10px; }
+  .gmail-attachment > span { font-size: 9px; }
+  .gmail-send-tools { min-height: 44px; }
+  .gmail-send-label { font-size: 11px; }
+  .work-review-pill { font-size: 11px; bottom: 6px; max-width: calc(100% - 30px); }
+  .work-agent-cursor { display: none; }
+  .work-activity-toggle { min-height: 48px; font-size: 11px; }
+  .work-activity-log strong { font-size: 12px; }
+  .work-activity-log small, .work-activity-log details > p { font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .feature-showcase, .product-section, .cloud-work-section { padding-inline: 16px; }
+  .coauthored-line { font-size: 21px; }
+  .feature-selector strong, .architecture-tabs button { font-size: 11px; }
+  .work-tab-list button { font-size: 9px; }
+}
